@@ -1,6 +1,9 @@
+const { User } = require("../db/models");
+
 const getUsers = async (req, res) => {
   try {
-    res.send("GET USERS");
+    const users = await User.findAll();
+    res.send(users);
   } catch(err) {
     console.error(err);
   }
