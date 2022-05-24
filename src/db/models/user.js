@@ -14,6 +14,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   User.init({
+    googleId: {
+      type: DataTypes.TEXT,
+    },
     firstName: {
       type: DataTypes.STRING,
       allowNull: false
